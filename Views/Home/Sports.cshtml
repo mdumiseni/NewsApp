@@ -1,0 +1,15 @@
+﻿@model NewsAPI.Models.ArticlesResult
+
+<div class="row">
+    @foreach (var article in Model.Articles)
+    {
+        <div class="card col-lg-4 col-sm-2 pb-3" style="width: 18rem;">
+            <img src="@article.UrlToImage" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">@article.Title</h5>
+                <p class="card-text">@article.Description</p>
+                <a href="#" class="btn btn-primary">Read more...</a>
+            </div>
+        </div>
+    }
+</div>
